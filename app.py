@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-from eventregistry import *
 import urllib
 import json
 import os
