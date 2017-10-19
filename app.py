@@ -40,7 +40,7 @@ def makeWebhookResult(req):
     response = er.execQuery(q)
     print(response)
     
-    title = response['articles']['results']['title']
+    title = response['articles']['results'][0]['title']
     
     speech = "Here is a headline for an article based on " + keywork + " : " + title
     
