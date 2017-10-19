@@ -4,6 +4,8 @@ import urllib
 import json
 import os
 
+from eventregistry import *
+
 from flask import Flask
 from flask import request
 from flask import make_response
