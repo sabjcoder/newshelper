@@ -40,7 +40,7 @@ def makeWebhookResult(req):
     response = er.execQuery(q)
     print(response)
     
-    title = response['articles']['title']
+    title = response['articles']['results']['title']
     
     speech = "Here is a headline for an article based on " + keywork + " : " + title
     
@@ -52,7 +52,7 @@ def makeWebhookResult(req):
         "displayText": speech,
         #"data": {},
         # "contextOut": [],
-        "source": "apiai-onlinestore-shipping"
+        "source": "newshelper"
     }
 
 
