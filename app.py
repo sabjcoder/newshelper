@@ -40,7 +40,10 @@ def makeWebhookResult(req):
     response = er.execQuery(q)
     print(response)
     
-    speech = "This is a test webhook response that you asked for " + keyword
+    article = json.load(respone)
+    title = response["title"]
+    
+    speech = "Here is a headline for an article based on " + keywork + " : " + title
     
     print("Response:")
     print(speech)
