@@ -33,13 +33,14 @@ def makeWebhookResult(req):
     result = req.get("result")
     parameters = result.get("parameters")
     keyword = parameters.get("keyword")
-
-    speech = "This is a test webhook response that you asked for " + keyword
     
     er = EventRegistry(apiKey = "c9a7f5dc-9fe5-4943-a89f-6486536c9e01")
     q = QueryArticles(keywords = keyword)
+    q.setRequestedResult(RequestArticlesInfo(count = 1))
     response = er.execQuery(q)
     print(response)
+    
+    speech = "This is a test webhook response that you asked for " + keyword
     
     print("Response:")
     print(speech)
