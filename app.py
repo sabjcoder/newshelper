@@ -38,7 +38,7 @@ def makeWebhookResult(req):
     
     q = QueryArticles(keywords = keyword)
     res = er.execQuery(q)
-    print res
+    print(res)
     
     print("Response:")
     print(speech)
