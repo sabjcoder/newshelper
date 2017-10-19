@@ -36,10 +36,9 @@ def makeWebhookResult(req):
 
     speech = "This is a test webhook response that you asked for " + keyword
     
-    er = EventRegistry(apiKey = "c9a7f5dc-9fe5-4943-a89f-6486536c9e01")
-    q = QueryArticlesIter(conceptUri = er.getConceptUri(keyword))
-    for article in q.execQuery(er):
-        print(article)
+    q = QueryArticles(keywords = keyword)
+    res = er.execQuery(q)
+    print res
     
     print("Response:")
     print(speech)
