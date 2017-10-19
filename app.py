@@ -42,7 +42,7 @@ def makeWebhookResult(req):
     
     title = response['articles']['results'][0]['title']
     
-    speech = "Here is a headline for an article based on " + keywork + " : " + title
+    speech = "Here is a headline for an article based on " + keyword + " : " + title
     
     print("Response:")
     print(speech)
