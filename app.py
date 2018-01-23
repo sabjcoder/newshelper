@@ -100,7 +100,7 @@ def makeWebhookResultForGetNews(data):
     return {
         "speech": speech,
         "displayText": speech,
-        "source": "webhookdata"
+        "source": "newshelper"
     }
 
 
