@@ -150,7 +150,8 @@ def makeWebhookResult(data):
     if (location is None) or (item is None) or (units is None):
         return {}
 
-    condition = item.get('condition')
+    cond = item.get('condition')
+	condition = (cond - 32) / 1.8
     if condition is None:
         return {}
 
