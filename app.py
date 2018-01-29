@@ -151,7 +151,7 @@ def makeWebhookResult(data):
         return {}
 
     cond = item.get('condition')
-	condition = (cond - 32) / 1.8
+	condition = (int(cond) - 32) / 1.8
     if condition is None:
         return {}
 
