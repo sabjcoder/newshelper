@@ -159,7 +159,7 @@ def makeWebhookResult(data):
     far =cel-1
     
     speech = "Today in " + location.get('city') + ": " + condition.get('text') + \
-             ", the temperature is " + far + " " + units.get('temperature')
+             ", the temperature is " + condition.get('temp') + " " + units.get('temperature') + " " + cel
         
     print("Response:")
     print(speech)
