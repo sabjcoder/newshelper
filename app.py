@@ -87,14 +87,14 @@ def makeWebhookResult(data):
         return {}
 
     item = channel.get('item')
-	item = item - 32
+	itm = item - 32
 	
     location = channel.get('location')
     units = channel.get('units')
-    if (location is None) or (item is None) or (units is None):
+    if (location is None) or (itm is None) or (units is None):
         return {}
 
-    condition = item.get('condition')
+    condition = itm.get('condition')
     if condition is None:
         return {}
 
