@@ -128,12 +128,11 @@ def makeYqlQuery(req):
     if city is None:
         return None
     
+    u = 'c'
     unt = parameter.get("unit")
     if unt == 'fahrenheit':
         u = 'f'
-    else 
-        u = 'c'
-
+        
     return "select * from weather.forecast where woeid in (select woeid from geo.places(1) where text='" + city + "') and u='"+c+"'"
 
 
