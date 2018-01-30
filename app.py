@@ -129,7 +129,9 @@ def makeYqlQuery(req):
     
     u = 'c'   
     if unt == 'fahrenheit':
-        u = f
+        u = 'f'
+    else:
+        u = 'c'   
         
     if city is None:
         return None
