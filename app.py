@@ -86,7 +86,8 @@ def makeWebhookResult(data):
     if channel is None:
         return {}
 
-    item = int(channel.get('item'))-32
+    item = channel.get('item')
+	item = item - 32
 	
     location = channel.get('location')
     units = channel.get('units')
