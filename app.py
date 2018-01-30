@@ -127,6 +127,7 @@ def makeYqlQuery(req):
     city = parameters.get("geo-city")
     if city is None:
         return None
+    
     unt =parameter.get("unit")
     if unt == 'fahrenheit':
         u = 'f'
