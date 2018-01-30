@@ -130,6 +130,8 @@ def makeYqlQuery(req):
     
     if city is None:
         return None
+    
+    
     return "select * from weather.forecast where woeid in (select woeid from geo.places(1) where text='" + city + "') and u='"+c+"'"
 
 
