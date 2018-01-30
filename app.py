@@ -126,7 +126,7 @@ def makeYqlQuery(req):
     parameters = result.get("parameters")
     city = parameters.get("geo-city")
     
-    u = 'c'    
+    u = 'f'    
     if city is None:
         return None
     
